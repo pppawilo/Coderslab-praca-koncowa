@@ -1,0 +1,40 @@
+<div *ngIf="song">
+
+
+
+  <mat-card class="song-card">
+    <mat-card-header>
+
+      <mat-card-title>
+        <mat-icon matListIcon>title</mat-icon> {{song.title}}
+      </mat-card-title>
+
+      <mat-card-subtitle>
+        <mat-icon matListIcon>person</mat-icon> {{song.author}}
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <p>
+        <mat-icon matListIcon>queue_music</mat-icon> {{song.chords}}
+      </p>
+
+      <p>
+        <mat-icon matListIcon>textsms</mat-icon> {{song.lyrics}}
+      </p>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="warn" (click)='deleteSong()'>DELETE <mat-icon matListIcon>delete</mat-icon></button>
+      <button mat-flat-button color="transposeDown">TRANSPOSE <mat-icon matListIcon>arrow_downward</mat-icon></button>
+      <button mat-flat-button color="transposeUp">TRANSPOSE <mat-icon matListIcon>arrow_upward</mat-icon></button>
+
+    </mat-card-actions>
+  </mat-card>
+
+
+
+
+
+</div>

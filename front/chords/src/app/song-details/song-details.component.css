@@ -1,0 +1,12 @@
+.song-card {
+  max-width: 500px;
+}
+
+.mat-transposeDown {
+  background-color: dodgerblue;
+  color: #fff;
+}
+.mat-transposeUp {
+  background-color: lightseagreen;
+  color: #fff;
+}

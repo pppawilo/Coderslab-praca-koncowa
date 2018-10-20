@@ -1,0 +1,34 @@
+<h3>Add song</h3>
+<div [hidden]="submitted" style="width: 300px;">
+
+  <form (ngSubmit)="onSubmit()" class="example-form">
+    <mat-icon matListIcon>title</mat-icon>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput placeholder="Title" value="" required [(ngModel)]="song.title" name="title">
+    </mat-form-field>
+    <mat-icon matListIcon>person</mat-icon>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <input matInput placeholder="Author" value="" required [(ngModel)]="song.author" name="author">
+    </mat-form-field>
+
+    <mat-icon matListIcon>queue_music</mat-icon>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <textarea matInput placeholder="Chords" required [(ngModel)]="song.chords" name="chords"></textarea>
+    </mat-form-field>
+
+    <mat-icon matListIcon>textsms</mat-icon>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <textarea matInput placeholder="Lyrics" required [(ngModel)]="song.lyrics" name="lyrics"></textarea>
+    </mat-form-field>
+    <button mat-flat-button type="submit" color="primary">Submit</button>
+
+  </form>
+
+
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Song added.</h4>
+  <button mat-flat-button (click)="newSong()" color="primary">Add</button>
+
+</div>
