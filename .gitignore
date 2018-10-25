@@ -23,3 +23,21 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# dependencies
+**/node_modules
+**/bower_components
+
+
+# misc
+**/.sass-cache
+**/connect.lock
+**/coverage/*
+**/libpeerconnection.log
+npm-debug.log
+testem.log
+**/typings
+
+# e2e
+**/e2e/*.js
+**/e2e/*.map
