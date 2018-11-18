@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pl.coderslab.domain.Song;
 import pl.coderslab.repository.SongRepository;
 
-@CrossOrigin(origins = { "http://localhost:4200", "http://127.0.0.1:8081" })
+@CrossOrigin(origins = { "http://localhost:4200", "http://127.0.0.1:8081", "http://192.168.8.103:8081" })
 @RestController
 public class SongController {
 

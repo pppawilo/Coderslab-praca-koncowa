@@ -10,3 +10,7 @@
   background-color: lightseagreen;
   color: #fff;
 }
+
+.multiline {
+  white-space: pre-line;
+}
