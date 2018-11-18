@@ -1,13 +1,33 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>{{title}}</span>
+    <span>{{ title }}</span>
   </mat-toolbar-row>
+
+  <nav>
+    <button
+      routerLink="song"
+      mat-flat-button
+      color="primary"
+      routerLinkActive="active"
+    >
+      Songs
+    </button>
+    <button
+      routerLink="add"
+      mat-flat-button
+      color="primary"
+      routerLinkActive="active"
+    >
+      Add
+    </button>
+    <button
+      routerLink="findbyid"
+      mat-flat-button
+      color="primary"
+      routerLinkActive="active"
+    >
+      Search
+    </button>
+  </nav>
 </mat-toolbar>
-<nav>
-
-
-  <button routerLink="song" mat-flat-button color="primary" routerLinkActive="active">Songs</button>
-  <button routerLink="add" mat-flat-button color="primary" routerLinkActive="active">Add</button>
-  <button routerLink="findbyid" mat-flat-button color="primary" routerLinkActive="active">Search</button>
-</nav>
 <router-outlet></router-outlet>
