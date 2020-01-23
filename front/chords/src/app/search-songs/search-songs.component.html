@@ -1,18 +1,30 @@
+<mat-card class="song-card">
 <h3>Find by id</h3>
-<div style="width: 300px;">
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="lastname">id</label>
-      <input type="text" class="form-control" id="id" required [(ngModel)]="id" name="id">
-    </div>
 
-    <div class="btn-group">
-      <button type="submit" class="btn btn-success">Submit</button>
-    </div>
+  <form (ngSubmit)="onSubmit()" class="example-form">
+    
+     
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input
+          matInput
+          type="number"
+          placeholder="id"
+          id="id"
+          value=""
+          required
+          [(ngModel)]="id"
+          name="id"
+        />
+      </mat-form-field>
+
+    
+      <button mat-flat-button type="submit" color="primary">Submit</button>
+
   </form>
-</div>
+
 <ul>
   <li *ngFor="let song of songs">
     <h4>{{song.id}} - {{song.title}} {{song.author}}</h4>
   </li>
 </ul>
+</mat-card>
