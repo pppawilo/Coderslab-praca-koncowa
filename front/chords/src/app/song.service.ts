@@ -35,8 +35,10 @@ export class SongService {
   }
 
   deleteAll(): Observable<any> {
-    return this.http.delete(`${this.baseUrl}` + `/delete`, {
+    if(window.confirm('Are sure you want to delete all songs?')){
+        return this.http.delete(`${this.baseUrl}` + `/delete`, {
       responseType: "text"
-    });
+      });
+    }
   }
 }
